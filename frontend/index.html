@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Project 2 Frontend</title>
+</head>
 <body>
-  <h1>Project Test CI/CD</h1>
+  <h1>Project 2 – Frontend HTML</h1>
+  <button onclick="callApi()">Call Backend</button>
+
+  <script>
+    function callApi() {
+      fetch("https://project2-cve1.onrender.com")
+        .then(res => res.json())
+        .then(data => alert(JSON.stringify(data)))
+        .catch(err => alert("API error"));
+    }
+  </script>
 </body>
 </html>
