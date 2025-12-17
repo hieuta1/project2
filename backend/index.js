@@ -33,7 +33,13 @@ app.get("/api/laptops", (req, res) => {
   ]);
 });
 
-const PORT = process.env.PORT || 3000;
+/**
+ * ⚠️ QUAN TRỌNG:
+ * - Docker / Render sẽ inject PORT
+ * - Local thì fallback 10000
+ */
+const PORT = process.env.PORT || 10000;
+
 app.listen(PORT, () => {
   console.log("Laptop backend running on port", PORT);
 });
