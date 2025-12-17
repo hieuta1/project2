@@ -1,4 +1,4 @@
-fetch("http://localhost:10000/api/laptops")
+fetch("https://project2-cve1.onrender.com/api/laptops")
   .then(res => res.json())
   .then(data => {
     const tbody = document.getElementById("laptop-list");
