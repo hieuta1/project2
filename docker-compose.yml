@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: project2-backend
+    ports:
+      - "10000:10000"
+
+  frontend:
+    build: ./frontend
+    container_name: project2-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
