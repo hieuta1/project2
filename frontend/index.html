@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Project 2 Frontend</title>
+  <title>Website bán laptop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Project 2 – Frontend HTML</h1>
-  <button onclick="callApi()">Call Backend</button>
 
-  <script>
-    function callApi() {
-      fetch("https://project2-cve1.onrender.com")
-        .then(res => res.json())
-        .then(data => alert(JSON.stringify(data)))
-        .catch(err => alert("API error"));
-    }
-  </script>
+<h1>💻 Danh sách Laptop</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Tên</th>
+      <th>CPU</th>
+      <th>RAM</th>
+      <th>Ổ cứng</th>
+      <th>Giá</th>
+    </tr>
+  </thead>
+  <tbody id="laptop-list"></tbody>
+</table>
+
+<script src="script.js"></script>
 </body>
 </html>
